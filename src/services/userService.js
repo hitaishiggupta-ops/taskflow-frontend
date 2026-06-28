@@ -3,7 +3,7 @@ import api from "./api";
 import axios from "axios";
 
 const API =
-  "http://localhost:8000/api/users";
+  `${import.meta.env.VITE_API_URL || "https://task.sawaitechsolutions.com"}/api/users`;
 
 export const getUsers = () => {
   return axios.get(API, {
