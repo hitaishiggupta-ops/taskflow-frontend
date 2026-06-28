@@ -79,7 +79,7 @@ export default function TaskCard({ task, moveTask, deleteTask, refreshTasks, isO
       {/* Attached image */}
       {task.imageUrl && (
         <img
-          src={`http://localhost:8000${task.imageUrl}`}
+          src={`${import.meta.env.VITE_API_URL || "http://localhost:8000"}${task.imageUrl}`}
           alt="task attachment"
           style={{ width: "100%", borderRadius: 8, marginBottom: 10, maxHeight: 160, objectFit: "cover" }}
         />
